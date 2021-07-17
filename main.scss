@@ -194,10 +194,22 @@ body {
     }
   }
 }
+#linkedin {
+  position: absolute;
+  filter: invert(1);
+}
 #author {
   position: absolute;
-  bottom: 0.1rem;
+
   font-size: 0.7rem;
   text-align: center;
-  margin-left: 6.2rem;
+  margin-top: 0.3rem;
+  margin-left: 5.2rem;
+}
+svg {
+  filter: invert(1);
+}
+#baixo {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
 }
