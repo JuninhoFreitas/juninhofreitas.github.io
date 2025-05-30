@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Junior Freitas | Linktree</title>
-    <!-- Favicon -->
     <link rel="icon" href="https://avatars.githubusercontent.com/u/65375556" type="image/x-icon" />
-    <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <!-- Core theme CSS -->
     <link rel="stylesheet" href="style.css">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RDV71CV552"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RDV71CV552"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -23,15 +19,12 @@
 
   <body>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9430277670852058"
-     crossorigin="anonymous"></script>
-    <!-- Parallax Pixel Background Animation -->
+      crossorigin="anonymous"></script>
     <section class="animated-background">
       <div id="stars1"></div>
       <div id="stars2"></div>
       <div id="stars3"></div>
     </section>
-    <!-- End of Parallax Pixel Background Animation -->
-
     <a id="profilePicture" href="#popup">
       <img src="https://avatars.githubusercontent.com/u/65375556" alt="Profile Picture">
     </a>
@@ -76,11 +69,34 @@
       <a class="link" href="https://www.canva.com/design/DAF12yXKuSY/SWPvI0-cGOAo94wlNK6eQw/edit?utm_content=DAF12yXKuSY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">
         <i class="fab fa-slideshare">&nbsp;</i>Slides Node.Js Streams
       </a>
-      
+       
     </div>
 
     <div id="hashtag">
       #OpenToContribute❤
     </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.link');
+
+        links.forEach(link => {
+          link.addEventListener('click', function() {
+            const linkText = this.innerText.trim(); // Pega o texto visível do link
+            const linkUrl = this.href; // Pega a URL do link
+
+            gtag('event', 'link_clicado', {
+              'link_texto': linkText,
+              'link_url': linkUrl
+            });
+
+            console.log('Evento disparado:', {
+              'link_texto': linkText,
+              'link_url': linkUrl
+            });
+          });
+        });
+      });
+    </script>
   </body>
 </html>
